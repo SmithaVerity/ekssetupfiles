@@ -4,6 +4,8 @@ aws iam put-role-policy --role-name ctipsfisrole --policy-name ctipsfispolicy --
 
 aws iam create-role --role-name ssmpermissionsrole --assume-role-policy-document file://ssmrole-trust-policy.json
 
+aws iam put-role-policy --role-name ssmpermissionsrole --policy-name ssmpermissionspolicy --policy-document file://sssrole-permissions-policy.json
+
 aws iam attach-role-policy --role-name ssmpermissionsrole --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
 
 aws iam create-instance-profile --instance-profile-name SSMInstanceProfile
