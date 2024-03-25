@@ -11,13 +11,6 @@
                 "ssmmessages:OpenDataChannel"
             ],
             "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "kms:Decrypt"
-            ],
-            "Resource": "key-name"
         }
     ]
 }
